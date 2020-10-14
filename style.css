@@ -1,43 +1,69 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.container{
-    background-color: gray;
-    height: 700px;
-    width: 100%;
-}
-.toDoCreator{
-    position: relative;
-    top:15px;
-    left:200px;
-    background-color: lightseagreen;
-    height: 50px;
-    width: 400px;
-}
-.toDoDisplay{
-    position: relative;
-    top:20px;
-    left: 200px;
-    background-color: lightsalmon;
-    width: 400px;
-    
+.container {
+  background-color: gray;
+  height: 700px;
+  width: 100%;
 }
 
-#input{
-    margin: 7px;
-    width: 70%;
-    height: 30px;
-    font-size: 20px;
-    color: dodgerblue;
+#heading {
+  position: absolute;
+  left: 200px;
+  color: white;
+}
+.toDoCreator {
+  position: relative;
+  top: 45px;
+  left: 200px;
+  background-color: lightseagreen;
+  height: 50px;
+  width: 400px;
+}
+.toDoDisplay {
+  position: relative;
+  top: 50px;
+  left: 200px;
+  background-color: lightsalmon;
+  width: 400px;
 }
 
-#btn{
-    
-    margin: 7px;
-    margin-left: 0;
-    width: 20%;
-    height: 33px;
-    color: orangered;
-    font-size: 20px;
+#input {
+  margin: 7px;
+  width: 70%;
+  height: 30px;
+  font-size: 20px;
+  color: dodgerblue;
 }
+
+#btn {
+  margin: 7px;
+  margin-left: 0;
+  width: 20%;
+  height: 33px;
+  color: orangered;
+  font-size: 20px;
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        background-color: gray;
+    }
+
+    .toDoCreator {
+        position: relative;
+        top: 15px;
+        left: 20px;
+        background-color: lightseagreen;
+        height: 50px;
+        width: 320px;
+    }
+
+    .toDoDisplay {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        background-color: lightsalmon;
+        width:320px;
+    }
+  }

@@ -1,8 +1,8 @@
-let btn=document.getElementById("btn");
-let inp=document.getElementById("input");
-let displayDiv=document.getElementById("displayToDo");
-let checkedList=[];
-let toDoList=[];
+let btn = document.getElementById("btn");
+let inp = document.getElementById("input");
+let displayDiv = document.getElementById("displayToDo");
+let checkedList = [];
+let toDoList = [];
 
 
 displayDiv.addEventListener("click",(e)=>{
@@ -12,15 +12,20 @@ displayDiv.addEventListener("click",(e)=>{
     }
 
     if(e.path[0].id.charAt(0)==="c"){
+
         let id=e.path[0].id;
+        
         if(checkedList.indexOf(id)===-1){
+        
             console.log(e.path[0].id);
             checkedList.push(e.path[0].id);
             let indexNum=e.path[0].id.substr(8,)
             let strike=document.getElementById(`para${indexNum}`);
             let strikeTxt=strike.textContent;
             strike.innerHTML=`<s>${strikeTxt}</s>`
+        
         }else if(checkedList.indexOf(id)!=-1){
+        
             console.log(e.path[0].id);
             let indexNum=e.path[0].id.substr(8,);
             let deleteIndex=checkedList.indexOf(id);
@@ -29,14 +34,18 @@ displayDiv.addEventListener("click",(e)=>{
             let strike=document.getElementById(`para${indexNum}`);
             let strikeTxt=strike.textContent;
             strike.innerHTML=`${strikeTxt}`
+        
         }
     }
 })
 
 
 btn.addEventListener("click",()=>{
+    
     if(inp.value!=""){
+        
         if(toDoList.indexOf(inp.value)===-1){
+        
             toDoList.push(inp.value);
             inp.value="";
             displayDiv.innerHTML="";
@@ -47,9 +56,13 @@ btn.addEventListener("click",()=>{
 })
 
 inp.addEventListener("keyup",(event)=>{
+    
     if(inp.value!=""){
+    
         if(event.key==="Enter"){
+    
             if((toDoList.indexOf(inp.value)===-1)){
+    
                 toDoList.push(inp.value);
                 inp.value="";
                 displayDiv.innerHTML="";
@@ -63,6 +76,7 @@ inp.addEventListener("keyup",(event)=>{
 function showToDo(){
     
     toDoList.forEach((i,index)=>{
+    
         let toDoDiv=document.createElement("div");
         toDoDiv.id="div"+index;
         let checkBox=document.createElement("input");
