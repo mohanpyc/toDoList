@@ -9,7 +9,7 @@
 }
 .toDoCreator{
     position: relative;
-    top:150px;
+    top:15px;
     left:200px;
     background-color: lightseagreen;
     height: 50px;
@@ -17,7 +17,7 @@
 }
 .toDoDisplay{
     position: relative;
-    top:160px;
+    top:20px;
     left: 200px;
     background-color: lightsalmon;
     width: 400px;
